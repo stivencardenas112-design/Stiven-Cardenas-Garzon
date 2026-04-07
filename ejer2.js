@@ -1,16 +1,11 @@
-function numeros(){
-    loc= document.getElementById("loc").value
-    limite= document.getElementById("limite").value
-for (let i = 1; i < limite ; i++) {
-            gur=loc*i
-        if(loc % 2 == 0){
-            console.log(loc+"*"+i+"="+gur+"par")
-        }
-        else{
-            console.log(loc+"*"+i+"="+gur+"impar")
-        }
-    }
-
+function areaperi(){
+    t= parseInt(document.getElementById("area").value)
+    are=t*t
+    peri=4*t
+    document.getElementById("perimetro").value=peri+" cm"
+    document.getElementById("resuarea").value=are+ " cm2"
+    texto= document.getElementById("loca").textContent
+    document.getElementById("loca").textContent=texto+peri
+    texto= document.getElementById("loco").textContent
+    document.getElementById("loco").textContent=texto+are
 }
-
-

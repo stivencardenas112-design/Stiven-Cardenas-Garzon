@@ -1,32 +1,23 @@
-function adivinar(){
-    
-    num = parseInt(document.getElementById("adivinar").value);
-    resultado1 = document.getElementById("resultado6");
-    resultado2 = document.getElementById("resultxt6");
+function mayorMenor(){
 
-    historial.push(num);
-    intentos--;
+    n1 = parseInt(document.getElementById("mayMen").value)
+    n2 = parseInt(document.getElementById("menMay").value)
 
-    if (num == numeroSecreto) {
-        resultado1.value = "Gano :)";
-        resultado2.innerHTML = "Adivinaste el número " + numeroSecreto + "<br>" + "Intentos usados: " + (15 - intentos) + "<br>" + "Numeros ingresados: " + historial
-        document.getElementById("btnAdivinar").disabled = true;
-        return;
+    resultado1 = document.getElementById("resultado8");
+    resultado2 = document.getElementById("resultxt8");
+
+    if(n1 == n2){
+        resultado1.value = n1 + " igual a" + n2;
+        resultado2.innerHTML = "El numero " + n1 + " es igual que " + n2;
+    }
+    else if(n1 > n2){
+        resultado1.value = n1 + ">" + n2;
+        resultado2.innerHTML = "El numero " + n1 + " es mayor que " + n2;
+    }
+    else{
+        resultado1.value = n2 + ">" + n1;
+        resultado2.innerHTML = "El numero " + n2 + " es mayor que " + n1;
     }
 
-    if (intentos == 0) {
-        resultado1.value = "Perdiste";
-        resultado2.innerHTML = "El número era " + numeroSecreto + "<br>" + "Numeros ingresados: " + historial
-        document.getElementById("btnAdivinar").disabled = true;
-        return;
-    }
 
-    if (num < numeroSecreto) {
-        resultado1.value = "El numero es MAYOR";
-    } else {
-        resultado1.value = "El numero es MENOR";
-    }
-
-    resultado2.innerHTML = "Intentos restantes: " + intentos + "<br>" + "Numeros ingresados: " + historial    
 }
-

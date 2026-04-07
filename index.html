@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>JHOAN STIVEN CARDENAS</title>
   <link rel="stylesheet" href="loc.css">
 </head>
 <body>
@@ -11,20 +11,14 @@
     <h1>Jhoan Stiven Cardenas</h1>
   </header>
 <div id="contenedor">
-  <div class="espacio">
-    <script src="ejer3.js"></script>
-    <input type="number" id="num1" placeholder="numero 1">
-    <input type="number" id="num2" placeholder="numero 2">
-    <button onclick="sumar()">sumar</button>
-    <br>
-    <input type="text" id="resultado" placeholder="resultado" readonly>
-    <div>
-      <h1 id="resultexto">resultado:  </h1>
-    </div>
 
-  </div>
+
+
+
+
+<!-- //1 - Has hecho una compra y sabes el precio del producto y su iva. Haz un script que te calcule el precio total que vas a pagar por tu compra. -->
   <div class="espacio">
-    <script src="ejer4.js"></script>
+    <script src="ejer1.js"></script>
     <input type="number" id="precio" placeholder="precio del producto">
     <input type="number" id="iva" placeholder="iva del producto">
     <button onclick="porceiva()">hacer ope</button>
@@ -37,8 +31,15 @@
   </div>
 
 
+
+
+
+
+
+
+  <!-- //2 - En una variable tienes el lado de un cuadrado, debes escribir un programa que te calcule el área y el perímetro del cuadrado. -->
   <div class="espacio">
-    <script src="ejer5.js"></script>
+    <script src="ejer2.js"></script>
     <input type="number" id="area" placeholder="">
     <button onclick="areaperi()">dar</button>
     <br>
@@ -51,8 +52,19 @@
       <h1 id="loca">Resultado perimetro:  </h1>
     </div>
   </div>
+
+
+
+
+
+
+
+
+
+
+  <!-- //3 - En este script debes pedir al usuario un número de dos dígitos y debes devolver el número de unidades y de decenas, o sea, cada dígito del número. Usa solo operaciones aritméticas. -->
   <div class="espacio">
-    <script src="ejer6.js"></script>
+    <script src="ejer3.js"></script>
             <input type="number" id="decena" placeholder="Digite numero">
             <br>
             <button onclick="unidadesDecenas()">Unidad y Decena</button>
@@ -70,16 +82,57 @@
             </div>
         </div>
 
-  <div class="espacio">
-        <script src="ejer7.js"></script>
-        <input type="number" id="adivinarInput" placeholder="Número">
-        <button onclick="adivinar()">Intentar</button>
-        <button onclick="reiniciar()">Reiniciar</button>
-        <p id="r5"></p>
-    </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- //4 - Una tortilla de patatas lleva 200 gramos de patatas por persona. Por cada kilo de patatas se necesitan 5 huevos y 300 gramos de cebolla. Escribe un script que dado el número de comensales calcule las cantidades de ingredientes necesarias. -->
   <div class="espacio">
-            <script src="ejer8.js"></script>
+            <script src="ejer4.js"></script>
+            <input type="number" id="personas" placeholder="Digite el numero de comensales">
+            <button onclick="ingrediente()">Total de ingredientes</button>
+            <br>
+            <p id="resultado5"></p>
+            <p id="resultado5.1"></p>
+            <p id="resultado5.2"></p>
+        </div>
+
+
+
+
+<!-- 5 - Juego de adivinar el numero entre 0 y 100, al final debe mostrar el numero de intentos y los números ingresados, el usuario tiene un máximo de 15 intentos los cuales se deben mostrar en cuenta regresiva; adicional dar pistas si el numero ingresado es mayor o menor al que se debe adivinar. -->
+  <div class="espacio">
+        <script src="ejer5.js"></script>
+        <input type="number" id="adivinar" placeholder="Digite numero a adivinar">
+        <br>
+        <button id="btnAdivinar" onclick="adivinar()">ADIVINAR</button>
+        <br>
+        <input type="text" id="LOC" placeholder="Resultado" readonly>
+          <div>
+            <p id="KISS"></p>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+<!-- //6 - Serie Fibonacci donde el usuario decide el numero de secuencias a mostrar. -->
+  <div class="espacio">
+            <script src="ejer6.js"></script>
             <input type="number" id="fibonacci" placeholder="Digite numero">
             <br>
             <button onclick="fibonacci()">Serie fibonacci</button>
@@ -91,8 +144,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- //7 - Realizar programa; Introducción de 2 números y el ordenador indica cual es -->
   <div class="espacio">
-        <script src="ejer9.js"></script>
+        <script src="ejer7.js"></script>
         <input type="number" id="mayMen" placeholder="Digite numero">
         <input type="number" id="menMay" placeholder="Digite numero">
         <br>
@@ -103,8 +170,23 @@
             <p id="resultxt8">Resultado: </p>
         </div>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 8- Realizar programa que calcule el factorial de un número entero no negativo ingresado por el usuario. -->
   <div class="espacio">
-    <script src="ejer10.js"></script>
+    <script src="ejer8.js"></script>
             <input type="number" id="numFactorial" placeholder="Numero factorial">
             <br>
             <button onclick="factorial()">Mostrar</button>
@@ -115,8 +197,24 @@
             </div>
         </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 9 - Escribe un programa que solicite al usuario dos números y luego muestre todos los números múltiplos de 6 que hay entre esos dos números, incluyendo los extremos -->
   <div class="espacio">
-    <script src="ejer11.js"></script>
+    <script src="ejer9.js"></script>
             <input type="number" id="multiplo1" placeholder="Digite menor">
             <input type="number" id="multiplo2" placeholder="Digite mayor">
             <br>
@@ -127,24 +225,64 @@
                 <p id="resultxt10">Resultado: </p>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+<!-- 10 - Crear un programa que genere un arreglo con 20 números entre 0 y 100, muestre este arreglo y luego cree 2 arreglos adiciones donde se separan pares de impares. -->
   <div class="espacio">
-    <script src="ejer12.js"></script>
-        <button onclick="tresArreglos()">Generar Arreglo</button>
-        <div>
-            <p id="resultxt11">Arreglo aleatorio generado: </p>
-            <br>
-            <p id="resultxtPar">Arreglo pares: </p>
-            <br>
-            <p id="resultxtImpar">Arreglo impares: </p>
+    <script src="ejer10"></script>
+            <button onclick="tresArreglos()">Generar Arreglo</button>
+            <div>
+                <p id="resultxt11">Arreglo aleatorio generado: </p>
+                <br>
+                <p id="resultxtPar">Arreglo pares: </p>
+                <br>
+                <p id="resultxtImpar">Arreglo impares: </p>
+            </div>
         </div>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 11 - Crear un programa que genere un arreglo con 10 números entre 10 y 20, lo muestre y luego elimine los múltiplos 3 mostrando como quedaría el arreglo modificado. -->
   <div class="espacio">
-    <script src="ejer13.js"></script>
+    <script src="ejer11.js"></script>
         <button onclick="arreglo10a20()">Arreglo 10-20</button>
         <p id="r11"></p>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 12 - dados los 3 lados de un triangulo estimar su área, y determinar si es equilátero, isósceles o escaleno. -->
     <div class="espacio">
-    <script src="ejer14.js"></script>
+    <script src="ejer12.js"></script>
             <input type="number" id="lado1" placeholder="Ingrese lado 1">
             <input type="number" id="lado2" placeholder="Ingrese lado 2">
             <input type="number" id="lado3" placeholder="Ingrese lado 3">
@@ -156,8 +294,20 @@
                 <p id="resultxt13"></p>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 13 - Crear un arreglo con n palabras, generar un nuevo arreglo con la cantidad de caracteres de cada palabra y por ultimo determinar de cuantos caracteres seria la oración con estas palabras. -->
     <div class="espacio">
-    <script src="ejer15.js"></script>
+    <script src="ejer13.js"></script>
             <input type="text" id="palabra" placeholder="Escriba una oracion">
             <button onclick="oracion()">Mostrar caracteres</button>
             <input type="text" id="resultado14" readonly>
@@ -165,8 +315,19 @@
                 <p id="resultxt14"></p>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+<!-- 14 - Generar un arreglo con 10 números, generar 2 nuevos arreglos, con uno invertir su contenido de manera algorítmica y el otro con el uso de la función (reverse) -->
     <div class="espacio">
-      <script src="ejer16.js"></script>
+      <script src="ejer14.js"></script>
             <button onclick="invertir()">Generar</button>
             
             <div>
@@ -181,8 +342,24 @@
                 <p id="arregloAlgoritmo"></p>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 15 -  Realizar calculadora básica, donde el usuario decide la operación a realizar mediante input type radio -->
     <div class="espacio">
-      <script src="ejer17.js"></script>
+      <script src="ejer15.js"></script>
             <input type="number" id="numCalculadora1" placeholder="Numero 1">
             <input type="number" id="numCalculadora2" placeholder="Numero 2">
             <br><br>

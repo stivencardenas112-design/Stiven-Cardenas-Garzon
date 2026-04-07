@@ -1,15 +1,9 @@
-function numeros(l){
-    t=0
-    for (let i = 0; i < l ; i++) {
-        nota=parseFloat(prompt("ingrese nota"+i+1))
-        t+=nota
-        console.log("notas ingresadas"+nota)
-        
-    }
-    console.log("nota definitiva"+(t/l));
+function porceiva(){
+    p1= parseFloat(document.getElementById("precio").value)
+    p2= parseFloat(document.getElementById("iva").value)
+    r=p1 * (p2/100)
+    sum=p1+r
+    document.getElementById("resul").value=sum
+    textor= document.getElementById("loc").textContent
+    document.getElementById("loc").textContent=textor+sum
 }
-
-n= parseInt(prompt("ingrese numero"))
-numeros(n);
-
-

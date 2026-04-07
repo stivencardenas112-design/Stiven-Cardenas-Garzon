@@ -1,30 +1,22 @@
-function triangulo(){ //Ejercicio 12
-    a = parseFloat(document.getElementById("lado1").value)
-    b = parseFloat(document.getElementById("lado2").value)
-    c = parseFloat(document.getElementById("lado3").value)
+function invertir(){ //Ejercicio 14
+    original = []
+    inverso = []
+    invertidoReverse = []
 
-    resultado1 = document.getElementById("resultado13")
-    resultado2 = document.getElementById("resultxt13")
+    resultado1 = document.getElementById("arregloOriginal")
+    resultado2 = document.getElementById("arregloAlgoritmo")
+    
 
-    if(a + b <= c || a + c <= b || b + c <= a){
-        resultado1.value = "No es triángulo"
-        resultado2.innerHTML = "Los lados no cumplen la condición"
-        return
+    for(i = 0; i<10; i++){
+        num = Math.floor(Math.random() * 100)
+        original.push(num)
     }
 
-    tipo = ""
-    if(a == b && b == c){
-        tipo = "Equilátero"
+    for(i = original.length - 1; i >= 0; i--){
+        inverso.push(original[i])
     }
-    else if(a == b || a == c || b == c){
-        tipo = "Isósceles"
-    }
-    else{
-        tipo = "Escaleno"
-    }
-    heron = (a + b + c) / 2
-    area = Math.sqrt(heron * (heron - a) * (heron - b) * (heron - c))
+    invertidoReverse = original.slice().reverse()
 
-    resultado1.value = tipo
-    resultado2.innerHTML = "Área: " + area.toFixed(2)
+    resultado1.innerHTML = "Original: " + original
+    resultado2.innerHTML = "Invertido (algortimico): " + inverso + "<br><br>" +"Invertido (reverse): " + invertidoReverse
 }

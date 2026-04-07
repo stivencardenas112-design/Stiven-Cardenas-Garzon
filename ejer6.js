@@ -1,18 +1,19 @@
-function unidadesDecenas(){
-    n1 = parseInt(document.getElementById("decena").value)
+function fibonacci (){
+    numer = parseInt(document.getElementById ("fibonacci").value)
+    x = 0
+    y = 1
+    //z = 1
+    serie = "0 1 "
+    perro= document.getElementById ("resulfibo")
 
-    resUnidad = document.getElementById("resultado4.1")
-    resDecena = document.getElementById("resultado4.2")
+    for (i = 1; i < numer; i++){
+        z= x+y //1 2 3
+        serie = serie + z + " "
+        x=y //1 
+        y=z //1
 
-    txtUnidad = document.getElementById("resultxt4.1")
-    txtDecena = document.getElementById("resultxt4.2")
 
-    unidad = n1 % 10
-    decena = (n1 - unidad) / 10
+    }
+    perro.innerHTML= serie
 
-    resUnidad.value = unidad
-    resDecena.value = decena
-
-    txtUnidad.textContent = "Unidad: " + unidad
-    txtDecena.textContent = "Decena: " + decena
 }

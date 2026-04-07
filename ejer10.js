@@ -1,18 +1,27 @@
-function factorial(){
+function tresArreglos(){ //Ejercicio 10
+    num = []
+    par = []
+    impar = []
 
-    nFacto = parseInt(document.getElementById("numFactorial").value)
+    resultado1 = document.getElementById("resultado11")
+    resultado2 = document.getElementById("resultxt11")
+    resultadoImpar = document.getElementById("resultxtImpar")
+    resultadoPar = document.getElementById("resultxtPar")
 
-    resultado1 = document.getElementById("pex");
-    resultado2 = document.getElementById("gato");
+    for(i = 0; i < 20; i++){
 
-    facto = 1
-    proceso = " "
-    for(i = nFacto; i >= 1; i--){
-        facto = facto * i
-        proceso = proceso + i + "  *  "
-    
+        numAletorio = Math.floor(Math.random() * 101);
+        num.push(numAletorio)
+
+        if(numAletorio % 2 == 0){
+            par.push(numAletorio)
+        }
+        else{
+            impar.push(numAletorio)
+        }
     }
-    
-    resultado1.value = facto
-    resultado2.innerHTML = "Resultado: " + proceso + " = " + facto
+
+    resultado2.innerHTML = "Arreglo aleatorio generado: " + num + "<br>";
+    resultadoPar.innerHTML = "Los numeros pares son: " + par + "<br>";
+    resultadoImpar.innerHTML = "Los numeros impares son: " + impar + "<br>"
 }

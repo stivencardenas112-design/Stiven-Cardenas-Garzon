@@ -1,20 +1,38 @@
-function oracion(){// Ejercicio 13
+function calculadora(){ //Ejercicio 15
 
-    cantidad = []
-    frase = []
+    n1 = parseFloat(document.getElementById("numCalculadora1").value)
+    n2 = parseFloat(document.getElementById("numCalculadora2").value)
 
-    frase = document.getElementById("palabra").value
-    resultado1 = document.getElementById("resultado14")
-    resultado2 = document.getElementById("resultxt14")
+    resultado1 = document.getElementById("resultado15")
+    resultado2 = document.getElementById("resultxt15")
 
-    frase = frase.split(" ")
-    totalFrase = 0
-    for(i = 0; i<frase.length; i++){
-        cantidad.push(frase[i].length)
-        totalFrase = totalFrase + frase[i].length
+    operacion = document.querySelector('input[name="operacion"]:checked')
+
+    if(!operacion){
+        resultado1.value = "Seleccione operación"
+        return
     }
 
-    resultado1.value = "Total: "+ totalFrase
-    resultado2.innerHTML = "Cantidad de letras por palabra: " + cantidad
+    res = 0
 
+    if(operacion.value == "suma"){
+        res = n1 + n2
+    }
+    else if(operacion.value == "resta"){
+        res = n1 - n2
+    }
+    else if(operacion.value == "multi"){
+        res = n1 * n2
+    }
+    else if(operacion.value == "div"){
+        if(n2 == 0){
+            resultado1.value = "Error"
+            resultado2.innerHTML = "No se puede dividir por 0"
+            return
+        }
+        res = n1 / n2
+    }
+
+    resultado1.value = res
+    resultado2.innerHTML = "Resultado: " + res
 }

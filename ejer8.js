@@ -1,19 +1,18 @@
-function fibonacci (){
-    numer = parseInt(document.getElementById ("fibonacci").value)
-    x = 0
-    y = 1
-    //z = 1
-    serie = "0 1 "
-    perro= document.getElementById ("resulfibo")
+function factorial(){
 
-    for (i = 1; i < numer; i++){
-        z= x+y //1 2 3
-        serie = serie + z + " "
-        x=y //1 
-        y=z //1
+    nFacto = parseInt(document.getElementById("numFactorial").value)
 
+    resultado1 = document.getElementById("pex");
+    resultado2 = document.getElementById("gato");
 
+    facto = 1
+    proceso = " "
+    for(i = nFacto; i >= 1; i--){
+        facto = facto * i
+        proceso = proceso + i + "  *  "
+    
     }
-    perro.innerHTML= serie
-
+    
+    resultado1.value = facto
+    resultado2.innerHTML = "Resultado: " + proceso + " = " + facto
 }

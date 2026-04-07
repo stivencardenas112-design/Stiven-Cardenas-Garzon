@@ -1,23 +1,26 @@
-function mayorMenor(){
+function multiplo(){
 
-    n1 = parseInt(document.getElementById("mayMen").value)
-    n2 = parseInt(document.getElementById("menMay").value)
+    n1 = parseInt(document.getElementById("multiplo1").value) // 10 y
+    n2 = parseInt(document.getElementById("multiplo2").value) // finaliza en 50
 
-    resultado1 = document.getElementById("resultado8");
-    resultado2 = document.getElementById("resultxt8");
+    resultado1 = document.getElementById("resultado10")
+    resultado2 = document.getElementById("resultxt10")
 
-    if(n1 == n2){
-        resultado1.value = n1 + " igual a" + n2;
-        resultado2.innerHTML = "El numero " + n1 + " es igual que " + n2;
+    cant = 0
+    m  = 0
+
+    if(n1 > n2){
+        temp = n1
+        n1 = n2
+        n2 = temp
     }
-    else if(n1 > n2){
-        resultado1.value = n1 + ">" + n2;
-        resultado2.innerHTML = "El numero " + n1 + " es mayor que " + n2;
-    }
-    else{
-        resultado1.value = n2 + ">" + n1;
-        resultado2.innerHTML = "El numero " + n2 + " es mayor que " + n1;
+    for(i = n1; i <= n2; i++){ // i = 10 y finaliza en 50 
+        if(i % 6 == 0){
+            cant++;
+            m = m + i + " "
+        }
     }
 
-
+    resultado1.value = "Tiene " + cant + " multiplos"
+    resultado2.innerHTML = "Multiplos del " + n1 + " al " + n2 + " Son: <br>" + m
 }

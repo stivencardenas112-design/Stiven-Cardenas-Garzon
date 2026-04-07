@@ -1,23 +1,20 @@
-function arreglo10a20(){
-    arr = [];
+function oracion(){// Ejercicio 13
 
-    // Generar arreglo
-    for(i = 0; i < 10; i++){
-        num = Math.floor(Math.random() * 11) + 10;
-        arr.push(num);
+    cantidad = []
+    frase = []
+
+    frase = document.getElementById("palabra").value
+    resultado1 = document.getElementById("resultado14")
+    resultado2 = document.getElementById("resultxt14")
+
+    frase = frase.split(" ")
+    totalFrase = 0
+    for(i = 0; i<frase.length; i++){
+        cantidad.push(frase[i].length)
+        totalFrase = totalFrase + frase[i].length
     }
 
-    original = [...arr]; // guardar copia para mostrar
+    resultado1.value = "Total: "+ totalFrase
+    resultado2.innerHTML = "Cantidad de letras por palabra: " + cantidad
 
-    // Eliminar múltiplos de 3 del mismo arreglo
-    for(i = 0; i < arr.length; i++){
-        if(arr[i] % 3 == 0){
-            arr.splice(i, 1);
-            i--; // importante para no saltar elementos
-        }
-    }
-
-    document.getElementById("r11").innerHTML =
-        "Original: " + original + "<br>" +
-        "Modificado (sin múltiplos de 3): " + arr;
 }
